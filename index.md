@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-https://github.com/ChristopherHelgeson/WeatherUnderground.git
+[Link] (https://github.com/ChristopherHelgeson/WeatherUnderground.git)
 
 You can use the [editor on GitHub](https://github.com/ChristopherHelgeson/ChristopherHelgeson.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
