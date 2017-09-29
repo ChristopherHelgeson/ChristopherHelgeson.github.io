@@ -1,6 +1,7 @@
-## Welcome to GitHub Pages
+## Links to some of my projects on GitHub:
 
-[my WeatherUnderground app](https://github.com/ChristopherHelgeson/WeatherUnderground.git)
+1. [my WeatherUnderground app](https://github.com/ChristopherHelgeson/WeatherUnderground.git)
+1. [Roman Numerals console app](https://github.com/ChristopherHelgeson/RomanNumerals.git)
 
 You can use the [editor on GitHub](https://github.com/ChristopherHelgeson/ChristopherHelgeson.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
