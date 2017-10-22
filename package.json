@@ -1,0 +1,23 @@
+{
+  "name": "christopherhelgeson.github.io",
+  "version": "1.0.0",
+  "description": "My coLearning Dashboard Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherHelgeson/ChristopherHelgeson.github.io.git"
+  },
+  "author": "Christopher Helgeson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristopherHelgeson/ChristopherHelgeson.github.io/issues"
+  },
+  "homepage": "https://github.com/ChristopherHelgeson/ChristopherHelgeson.github.io#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1"
+  }
+}
