@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/weather.css">
+    <style>
+      /*h1 {
+        font-family: 'Oswald', sans-serif;
+      }*/
+    </style>
+  </head>
+  <body>
+    <a href="http://www.weatherunderground.com" target="_blank">
+      <img id="WUlogo" src="public/images/wundergroundLogo_4c_horz.jpg" />
+    </a>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+      $.ajax({
+      url : "http://api.wunderground.com/api/12b8a40c145b360a/geolookup/conditions/q/MI/Grand_Rapids.json",
+      dataType : "jsonp",
+      success : function(parsed_json) {
+        var obs_time = parsed_json['current_observation']['observation_time'];
+        var full_loc = parsed_json['current_observation']['display_location']['full'];
+        var temp_f = parsed_json['current_observation']['temp_f'];
+        var dewpoint = parsed_json['current_observation']['dewpoint_string'];
+        var humidity = parsed_json['current_observation']['relative_humidity'];
+        var wind_string = parsed_json['current_observation']['wind_string'];
+        var wind_dir = parsed_json['current_observation']['wind_dir'];
+        var wind_degrees = parsed_json['current_observation']['wind_degrees'];
+        var wind_mph = parsed_json['current_observation']['wind_mph'];
+        var wind_gust_mph = parsed_json['current_observation']['wind_gust_mph'];
+        var pressure_in = parsed_json['current_observation']['pressure_in'];
+        var pressure_trend = parsed_json['current_observation']['pressure_trend'];
+      document.getElementById("obs_time").innerHTML = (obs_time);
+      document.getElementById("full_loc").innerHTML = ("Observation for: " + full_loc);
+      document.getElementById("temp_f").innerHTML = ("Temperature: " + temp_f + " F");
+      document.getElementById("dewpoint").innerHTML = ("Dewpoint: " + dewpoint);
+      document.getElementById("humidity").innerHTML = ("Humidity: " + humidity);
+      document.getElementById("wind").innerHTML = ("Wind " + wind_string + " from the " + wind_dir + " at " + wind_mph + " MPH gusting to " + wind_gust_mph + " MPH.");
+      document.getElementById("pressure").innerHTML = ("Pressure: " + pressure_in + " " + pressure_trend);
+      }
+      });
+    });
+    </script>
+
+    <h1 id="obs_time" class="updated"></h1>
+    <h1 id="full_loc"></h1>
+    <h1 id="temp_f"></h1>
+    <h1 id="dewpoint"></h1>
+    <h1 id="humidity"></h1>
+    <h1 id="wind"></h1>
+    <h1 id="pressure"></h1>
+
+<!--
+    <h1>Create Object from JSON String</h1>
+
+    <p id="demo"></p>
+
+    <script>
+    var text = '{"employees":[' +
+    '{"firstName":"John","lastName":"Doe" },' +
+    '{"firstName":"Anna","lastName":"Smith" },' +
+    '{"firstName":"Peter","lastName":"Jones" }]}';
+
+    obj = JSON.parse(text);
+    document.getElementById("demo").innerHTML =
+    obj.employees[0].firstName + " " + obj.employees[2].lastName;
+    </script>
+-->
+    <footer>
+      <p id="cloud-footer">Created by: Christopher Helgeson <a href="index.html">Back to home page</a></p>
+
+    </footer>
+  </body>
+</html>
