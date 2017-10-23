@@ -1,34 +1,8 @@
-.navbar {
-  position:fixed;
-  left:0px;
-  top:0px;
-  height:65px;
-  width:100%;
-  background:#d67424;
-  border-bottom: 3px solid #d5d5d5;
-  font-size: .8em;
-  margin-bottom: 200px;
-}
-
-/* Links inside the navbar */
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Main content */
-.main {
-    margin-top: 80px; /* Add a top margin to avoid content overlay */
-}
-
 body {
-    background-color: black;
+    background-image: url("../images/CloudBackground.jpg");
     margin: 60px auto;
     width: 70%;
+    background-size: cover;
 }
 
 nav ul, footer ul {
@@ -43,14 +17,7 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: white;
-}
-
-a.section-title {
-    display: block;
-    position: relative;
-    top: -60px;
-    visibility: hidden;
+    color: green;
 }
 
 a:hover {
@@ -62,13 +29,12 @@ a:hover {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }*/
 h1 {
-  padding-top: 20px;
-  color: white;
+  color: #d67424;
   font-family: 'Oswald', sans-serif;
 }
 
-#page-title {
-  font-size: 4em;
+h1.updated {
+  color: white;
 }
 
 p {
@@ -77,13 +43,17 @@ p {
     color: white;
 }
 
+#cloud-footer {
+  color:#018BEE;
+}
+
 footer {
   position:fixed;
   left:0px;
   bottom:0px;
   height:65px;
   width:100%;
-  background:#d67424;
+  background: white;
   border-top: 3px solid #d5d5d5;
   font-size: .8em;
 }
@@ -95,4 +65,10 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+#WUlogo {
+    width: 640px;
+    border: 25px solid white;
+    /*border-right: 200px;*/
 }
