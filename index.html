@@ -33,46 +33,14 @@
       <h1 id="page-title">Christopher's Not-So-Great Dashboard</h1>
       <br>
       <a id="levelone" class="section-title"></a>
-        <h1>Current Local Weather</h2>
-
-          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-          <script>
-          jQuery(document).ready(function($) {
-            $.ajax({
-            url : "http://api.wunderground.com/api/12b8a40c145b360a/geolookup/conditions/q/MI/Grand_Rapids.json",
-            dataType : "jsonp",
-            success : function(parsed_json) {
-              var obs_time = parsed_json['current_observation']['observation_time'];
-              var full_loc = parsed_json['current_observation']['display_location']['full'];
-              var weather = parsed_json['current_observation']['weather'];
-              var temperature = parsed_json['current_observation']['temperature_string'];
-              var dewpoint = parsed_json['current_observation']['dewpoint_string'];
-              var humidity = parsed_json['current_observation']['relative_humidity'];
-              var wind_string = parsed_json['current_observation']['wind_string'];
-              var pressure_in = parsed_json['current_observation']['pressure_in'];
-              var pressure_trend = parsed_json['current_observation']['pressure_trend'];
-            document.getElementById("obs_time").innerHTML = (obs_time);
-            document.getElementById("full_loc").innerHTML = ("Observation for: " + full_loc);
-            document.getElementById("weather").innerHTML = (weather);
-            document.getElementById("temperature").innerHTML = ("Temperature: " + temperature);
-            document.getElementById("dewpoint").innerHTML = ("Dewpoint: " + dewpoint);
-            document.getElementById("humidity").innerHTML = ("Humidity: " + humidity);
-            document.getElementById("wind").innerHTML = (wind_string);
-            document.getElementById("pressure").innerHTML = ("Pressure: " + pressure_in + " " + pressure_trend);
-            }
-            });
-          });
-          </script>
-
-          <h1 id="obs_time" class="updated"></h1>
-          <h1 id="full_loc"></h1>
-          <h1 id="weather"></h1>
-          <h1 id="temperature"></h1>
-          <h1 id="dewpoint"></h1>
-          <h1 id="humidity"></h1>
-          <h1 id="wind"></h1>
-          <h1 id="pressure"></h1>
-
+        <h1>You've reached Level One</h2>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+             culpa qui officia deserunt mollit anim id est laborum."</p>
              <a href="#levelone">Back to top of page</a>
      <a id="leveltwo" class="section-title"></a>
       <h1>You've reached Level Two</h2>

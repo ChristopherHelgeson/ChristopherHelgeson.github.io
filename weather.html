@@ -10,15 +10,15 @@
     </style>
   </head>
   <body>
-    <a href="http://www.weatherunderground.com" target="_blank">
+    <a href="https://www.weatherunderground.com" target="_blank">
       <img id="WUlogo" src="public/images/wundergroundLogo_4c_horz.jpg" />
     </a>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script>
     jQuery(document).ready(function($) {
       $.ajax({
-      url : "http://api.wunderground.com/api/12b8a40c145b360a/geolookup/conditions/q/MI/Grand_Rapids.json",
+      url : "https://api.wunderground.com/api/12b8a40c145b360a/geolookup/conditions/q/MI/Grand_Rapids.json",
       dataType : "jsonp",
       success : function(parsed_json) {
         var obs_time = parsed_json['current_observation']['observation_time'];
@@ -32,11 +32,11 @@
         var pressure_trend = parsed_json['current_observation']['pressure_trend'];
       document.getElementById("obs_time").innerHTML = (obs_time);
       document.getElementById("full_loc").innerHTML = ("Observation for: " + full_loc);
-      document.getElementById("weather").innerHTML = (weather);
+      document.getElementById("weather").innerHTML = ("Weather: " + weather);
       document.getElementById("temperature").innerHTML = ("Temperature: " + temperature);
       document.getElementById("dewpoint").innerHTML = ("Dewpoint: " + dewpoint);
       document.getElementById("humidity").innerHTML = ("Humidity: " + humidity);
-      document.getElementById("wind").innerHTML = (wind_string);
+      document.getElementById("wind").innerHTML = ("Wind: " + wind_string);
       document.getElementById("pressure").innerHTML = ("Pressure: " + pressure_in + " " + pressure_trend);
       }
       });
