@@ -1,8 +1,9 @@
 body {
-    background-image: url("../images/CloudBackground.jpg");
+    /*background-image: url("../images/Background-Sunny.jpg");*/
     margin: 60px auto;
     width: 70%;
-    background-size: cover;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
 }
 
 nav ul, footer ul {
@@ -68,7 +69,7 @@ ul.posts li {
 }
 
 #WUlogo {
-    width: 640px;
+    width: 600px;
     border: 25px solid white;
     /*border-right: 200px;*/
 }
