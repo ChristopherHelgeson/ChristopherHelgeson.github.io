@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
     <link rel="stylesheet" type="text/css" href="public/css/weather.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   </head>
-  <body id="body">
+  <body id="weather-body">
 
     <a href="https://www.weatherunderground.com" target="_blank">
       <img id="WUlogo" src="public/images/wundergroundLogo_4c_horz.jpg" />
@@ -37,26 +38,26 @@
       document.getElementById("pressure").innerHTML = ("Pressure: " + pressure_in + " " + pressure_trend);
       document.getElementById("icon").innerHTML = ("<img src='public/images/weather-underground-icons/dist/icons/black/png/256x256/" + icon + ".png'>");
 
-      if (weather === "Overcast" || weather === "Cloudy") {
-        document.getElementById("body").style.background = "url('public/images/Background-Cloudy.jpg')";
+      if (weather === "Overcast" || weather === "Cloudy" || weather === "Mostly Cloudy") {
+        document.getElementById("weather-body").style.background = "url('public/images/Background-Cloudy.jpg')";
       }
       else if (weather === "Foggy") {
-        document.getElementById("body").style.background = "url('public/images/Background-Foggy.png')";
+        document.getElementById("weather-body").style.background = "url('public/images/Background-Foggy.png')";
       }
       else if (weather === "Rain" || weather === "Showers") {
-        document.getElementById("body").style.background = "url('public/images/Background-Rain.jpg')";
+        document.getElementById("weather-body").style.background = "url('public/images/Background-Rain.jpg')";
       }
       else if (weather === "Snow" || weather === "Flurries") {
-        document.getElementById("body").style.background = "url('public/images/Background-Snow.jpg')";
+        document.getElementById("weather-body").style.background = "url('public/images/Background-Snow.jpg')";
       }
       else if (weather === "Sunny") {
-        document.getElementById("body").style.background = "url('public/images/Background-Sunny.jpg')";
+        document.getElementById("weather-body").style.background = "url('public/images/Background-Sunny.jpg')";
       }
       else if (weather === "Partly Cloudy") {
-        document.getElementById("body").style.background = "url('public/images/Background-PartlyCloudy.jpg')";
+        document.getElementById("weather-body").style.background = "url('public/images/Background-PartlyCloudy.jpg')";
       }
       else {
-        document.getElementById("body").style.background = "url('public/images/Background-NoPhoto.jpg')";
+        document.getElementById("weather-body").style.background = "url('public/images/Background-NoPhoto.jpg')";
       }
 
       }
@@ -65,14 +66,14 @@
     </script>
 
     <h1 id="obs_time" class="updated"></h1>
-    <h1 id="full_loc"></h1>
-    <h1 id="weather"></h1>
-    <h1 id="temperature"></h1>
-    <h1 id="dewpoint"></h1>
-    <h1 id="humidity"></h1>
-    <h1 id="wind"></h1>
-    <h1 id="pressure"></h1>
-    <h1 id="icon"></h1>
+    <h1 id="full_loc" class="weather"></h1>
+    <h1 id="weather" class="weather"></h1>
+    <h1 id="temperature" class="weather"></h1>
+    <h1 id="dewpoint" class="weather"></h1>
+    <h1 id="humidity" class="weather"></h1>
+    <h1 id="wind" class="weather"></h1>
+    <h1 id="pressure" class="weather"></h1>
+    <h1 id="icon" class="weather"></h1>
 
 <!--
     <h1>Create Object from JSON String</h1>
@@ -91,8 +92,7 @@
     </script>
 -->
     <footer>
-      <p id="cloud-footer">Created by: Christopher Helgeson <a href="index.html">Back to home page</a></p>
-
+      <p>Created by: Christopher Helgeson <a href="index.html">Backto home page</a></p>
     </footer>
   </body>
 </html>

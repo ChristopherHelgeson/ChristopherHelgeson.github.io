@@ -1,9 +1,9 @@
-body {
+#weather-body {
     /*background-image: url("../images/Background-Sunny.jpg");*/
     margin: 60px auto;
-    width: 70%;
+    /*width: 70%;*/
     /*background-size: cover;*/
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
 }
 
 nav ul, footer ul {
@@ -16,20 +16,17 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
-a {
+/*a {
     text-decoration: none;
-    color: green;
-}
+    color: purple;
+}*/
 
 a:hover {
     text-decoration: underline;
 }
 
-/*h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}*/
-h1 {
+h1.weather {
+  padding-top: 0px;
   color: #d67424;
   font-family: 'Oswald', sans-serif;
 }
@@ -44,20 +41,9 @@ p {
     color: white;
 }
 
-#cloud-footer {
+/*#weather-footer {
   color:#018BEE;
-}
-
-footer {
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  height:65px;
-  width:100%;
-  background: white;
-  border-top: 3px solid #d5d5d5;
-  font-size: .8em;
-}
+}*/
 
 ul.posts {
     margin: 20px auto 40px;
@@ -72,4 +58,8 @@ ul.posts li {
     width: 600px;
     border: 25px solid white;
     /*border-right: 200px;*/
+}
+
+.updated {
+  color: white;
 }
