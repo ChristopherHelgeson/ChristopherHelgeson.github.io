@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="public/css/main.css">
-    <link rel="stylesheet" type="text/css" href="public/css/weather.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/weather.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   </head>
   <body id="weather-body">
 
     <a href="https://www.weatherunderground.com" target="_blank">
-      <img id="WUlogo" src="public/images/wundergroundLogo_4c_horz.jpg" />
+      <img id="WUlogo" src="../images/wundergroundLogo_4c_horz.jpg" />
     </a>
 
     <script>
@@ -36,28 +36,28 @@
       document.getElementById("humidity").innerHTML = ("Humidity: " + humidity);
       document.getElementById("wind").innerHTML = ("Wind: " + wind_string);
       document.getElementById("pressure").innerHTML = ("Pressure: " + pressure_in + " " + pressure_trend);
-      document.getElementById("icon").innerHTML = ("<img src='public/images/weather-underground-icons/dist/icons/black/png/256x256/" + icon + ".png'>");
+      document.getElementById("icon").innerHTML = ("<img src='../images/weather-underground-icons/dist/icons/black/png/256x256/" + icon + ".png'>");
 
       if (weather === "Overcast" || weather === "Cloudy" || weather === "Mostly Cloudy") {
-        document.getElementById("weather-body").style.background = "url('public/images/Background-Cloudy.jpg')";
+        document.getElementById("weather-body").style.background = "url('../images/Background-Cloudy.jpg')";
       }
       else if (weather === "Foggy") {
-        document.getElementById("weather-body").style.background = "url('public/images/Background-Foggy.png')";
+        document.getElementById("weather-body").style.background = "url('../images/Background-Foggy.png')";
       }
       else if (weather === "Rain" || weather === "Showers") {
-        document.getElementById("weather-body").style.background = "url('public/images/Background-Rain.jpg')";
+        document.getElementById("weather-body").style.background = "url('../images/Background-Rain.jpg')";
       }
       else if (weather === "Snow" || weather === "Flurries") {
-        document.getElementById("weather-body").style.background = "url('public/images/Background-Snow.jpg')";
+        document.getElementById("weather-body").style.background = "url('../images/Background-Snow.jpg')";
       }
       else if (weather === "Sunny") {
-        document.getElementById("weather-body").style.background = "url('public/images/Background-Sunny.jpg')";
+        document.getElementById("weather-body").style.background = "url('../images/Background-Sunny.jpg')";
       }
       else if (weather === "Partly Cloudy") {
-        document.getElementById("weather-body").style.background = "url('public/images/Background-PartlyCloudy.jpg')";
+        document.getElementById("weather-body").style.background = "url('../images/Background-PartlyCloudy.jpg')";
       }
       else {
-        document.getElementById("weather-body").style.background = "url('public/images/Background-NoPhoto.jpg')";
+        document.getElementById("weather-body").style.background = "url('../images/Background-NoPhoto.jpg')";
       }
 
       }
@@ -92,7 +92,7 @@
     </script>
 -->
     <footer>
-      <p>Created by: Christopher Helgeson <a href="index.html">Backto home page</a></p>
+      <p>Created by: Christopher Helgeson <a href="/~/../index.html">Back to home page</a></p>
     </footer>
   </body>
 </html>
