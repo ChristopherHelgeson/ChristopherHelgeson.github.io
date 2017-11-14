@@ -61,6 +61,12 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 
+#page-title {
+  font-size: 4em;
+  color: #d67424;
+  margin-bottom: 150px;
+}
+
 div.text-block {
     background-color: black;
     box-sizing: border-box;
@@ -71,6 +77,10 @@ div.text-block {
     border: 3px solid #d67424;
     margin-top: 360px;
     /*margin-bottom: 0px;*/
+}
+
+div.clock-block {
+    height: 430px;
 }
 
 a {
@@ -101,11 +111,6 @@ h1 {
   padding-top: 0px;
   color: white;
   font-family: 'Oswald', sans-serif;
-}
-
-#page-title {
-  font-size: 4em;
-  color: #d67424;
 }
 
 p {

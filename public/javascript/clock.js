@@ -1,5 +1,5 @@
-var header = document.getElementsByTagName("h1")[0];
-header.innerHTML = "JavaScript FTW!";
+//var header = document.getElementsByTagName("h1")[0];
+// header.innerHTML = "JavaScript FTW!";
 
 const timeAtLoad = moment();
 

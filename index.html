@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="public/css/index.css">
+    <link rel="stylesheet" type="text/css" href="public/css/clock.css">
     <style>
     /*h1 {
     font-family: 'Oswald', sans-serif;
@@ -16,7 +18,7 @@
           <a href="#levelone">Level One</a>
         </li>
         <li>
-          <a href="#leveltwo">Level Two</a>
+          <a href="#clock">Clock</a>
         </li>
         <li>
           <a href="#levelthree">Level Three</a>
@@ -27,9 +29,9 @@
         <li>
           <a href="/public/html/weather.html">Weather</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="/public/html/clock.html">Clock</a>
-        </li>
+        </li> -->
         <li>
           <a href="/public/html/360photo.html">360 Photo</a>
         </li>
@@ -42,6 +44,9 @@
       <h1 id="page-title">Christopher's Dashboard-in-Process</h1>
       <br>
     </div>
+
+<!-- SECTION ONE -->
+
       <a id="levelone"> </a>
       <div class="text-block">
         <h1>You've reached Level One</h1>
@@ -54,21 +59,64 @@
         culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum."</p>
-        <a href="#top">Back to top of page</a>
-      </div>
-      <a id="leveltwo"> </a>
-      <div class="text-block">
-        <h1>You've reached Level Two</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        culpa qui officia deserunt mollit anim id est laborum.
+        Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+        Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+        Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+        Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
         culpa qui officia deserunt mollit anim id est laborum."</p>
         <a href="#top">Back to top of page</a>
       </div>
+
+<!-- CLOCK SECTION -->
+
+      <a id="clock"> </a>
+      <div class="text-block clock-block">
+        <br>
+  <!-- Date and time from Alison Major demo -->
+        <h1 id="current-date" class="text-center h3 date-text">
+          01 January 1999
+        </h1>
+        <h2 id="current-time" class="text-center really-big-text">
+          12:00 PM
+        </h2>
+        <br>
+  <!-- hero clock from moment.js -->
+      <div class="hero-circle">
+  			<div class="hero-face">
+  				<div id="hour" class="hero-hour"></div>
+  				<div id="minute" class="hero-minute"></div>
+  				<div id="second" class="hero-second"></div>
+  			</div>
+  		</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="#top">Back to top of page</a>
+      </div>
+
+<!-- SECTION THREE -->
+
       <a id="levelthree"> </a>
       <div class="text-block">
         <h1>You've reached Level Three</h1>
@@ -81,6 +129,9 @@
         culpa qui officia deserunt mollit anim id est laborum."</p>
         <a href="#top">Back to top of page</a>
       </div>
+
+<!-- SECTION FOUR -->
+
       <a id="levelfour"> </a>
       <div class="text-block">
         <h1>You've reached Level Four</h1>
@@ -98,6 +149,11 @@
         <img src="/public/images/BlueRV6.jpg">
       </div>
 
+      <!-- This imports the moment.js minified library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+
+      <!-- This imports the javascript we're writing in scripts.js -->
+      <script src="public/javascript/clock.js"></script>
 
       <footer>
         <p>Created by: Christopher Helgeson <a href="#top">Back to top of page</a></p>
