@@ -1,10 +1,11 @@
 .navbar {
   position:fixed;
   left:0px;
-  top:0px;
+  top:20px;
   height:65px;
   width:100%;
   background:#d67424;
+  border-top: 3px solid #d5d5d5;
   border-bottom: 3px solid #d5d5d5;
   font-size: .8em;
   margin-bottom: 200px;
@@ -26,9 +27,26 @@
 }
 
 body {
+    background-image: url("/public/images/background-foggy.jpg");
     background-color: black;
-    margin: 60px auto;
+    margin: 200px auto;
     width: 70%;
+    padding-top: 100px;
+}
+
+body html {
+  height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    /*background-image: url("/public/images/background-foggy.jpg");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav ul, footer ul {
@@ -42,17 +60,34 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
+div.text-block {
+    background-color: black;
+    box-sizing: border-box;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: 3px solid #d67424;
+    margin-top: 360px;
+    /*margin-bottom: 0px;*/
+}
+
 a {
     text-decoration: none;
     color: white;
 }
 
-a.section-title {
+/*a.levelone {
+  top: -200px;
+}*/
+
+/*a.section-title {
+    top: -150px;
     display: block;
-    position: relative;
-    top: -60px;
+    top: -260px;
     visibility: hidden;
-}
+}*/
 
 a:hover {
     text-decoration: underline;
@@ -63,13 +98,14 @@ a:hover {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }*/
 h1 {
-  padding-top: 20px;
+  padding-top: 0px;
   color: white;
   font-family: 'Oswald', sans-serif;
 }
 
 #page-title {
   font-size: 4em;
+  color: #d67424;
 }
 
 p {
@@ -81,11 +117,12 @@ p {
 footer {
   position:fixed;
   left:0px;
-  bottom:0px;
+  bottom:20px;
   height:65px;
   width:100%;
   background:#d67424;
   border-top: 3px solid #d5d5d5;
+  border-bottom: 3px solid #d5d5d5;
   font-size: .8em;
 }
 
