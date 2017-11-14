@@ -5,50 +5,53 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="public/css/index.css">
     <link rel="stylesheet" type="text/css" href="public/css/clock.css">
-    <style>
-    /*h1 {
-    font-family: 'Oswald', sans-serif;
-    }*/
-    </style>
+    <link rel="stylesheet" type="text/css" href="public/css/weather.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   </head>
   <body class="parallax">
     <nav class="navbar">
       <ul>
         <li>
-          <a href="#levelone">Level One</a>
+          <a href="#top">Title</a>
         </li>
         <li>
-          <a href="#clock">Clock</a>
+          <a href="#boxone">Level One</a>
         </li>
         <li>
-          <a href="#levelthree">Level Three</a>
+          <a href="#boxtwo">Clock</a>
         </li>
         <li>
-          <a href="#levelfour">Level Four</a>
+          <a href="#boxthree">Weather</a>
         </li>
         <li>
+          <a href="#boxfour">360 Photo</a>
+        </li>
+        <!-- <li>
           <a href="/public/html/weather.html">Weather</a>
-        </li>
+        </li> -->
         <!-- <li>
           <a href="/public/html/clock.html">Clock</a>
         </li> -->
         <li>
+          <a href="#boxfive">N103SP</a>
+        </li>
+        <!-- <li>
           <a href="/public/html/360photo.html">360 Photo</a>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
           <a href="/public/html/xterm.html">xterm.js</a>
-        </li>
+        </li> -->
       </ul>
     </nav>
-    <div class="main">
+    <div class="main text-block title-block">
       <h1 id="page-title">Christopher's Dashboard-in-Process</h1>
       <br>
     </div>
 
 <!-- SECTION ONE -->
 
-      <a id="levelone"> </a>
-      <div class="text-block">
+      <a id="boxone"> </a>
+      <div class="text-block one-block">
         <h1>You've reached Level One</h1>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -80,12 +83,11 @@
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
         culpa qui officia deserunt mollit anim id est laborum."</p>
-        <a href="#top">Back to top of page</a>
       </div>
 
 <!-- CLOCK SECTION -->
 
-      <a id="clock"> </a>
+      <a id="boxtwo"> </a>
       <div class="text-block clock-block">
         <br>
   <!-- Date and time from Alison Major demo -->
@@ -97,57 +99,107 @@
         </h2>
         <br>
   <!-- hero clock from moment.js -->
-      <div class="hero-circle">
-  			<div class="hero-face">
-  				<div id="hour" class="hero-hour"></div>
-  				<div id="minute" class="hero-minute"></div>
-  				<div id="second" class="hero-second"></div>
-  			</div>
-  		</div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a href="#top">Back to top of page</a>
+        <div class="hero-circle">
+    			<div class="hero-face">
+    				<div id="hour" class="hero-hour"></div>
+    				<div id="minute" class="hero-minute"></div>
+    				<div id="second" class="hero-second"></div>
+    			</div>
+    		</div>
       </div>
 
-<!-- SECTION THREE -->
+<!-- WEATHER SECTION -->
 
-      <a id="levelthree"> </a>
-      <div class="text-block">
-        <h1>You've reached Level Three</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum."</p>
-        <a href="#top">Back to top of page</a>
+      <a id="boxthree"> </a>
+      <div class="text-block weather-block">
+        <a href="https://www.weatherunderground.com" target="_blank">
+          <img id="WUlogo" src="public/images/wundergroundLogo_4c_rev_horz.png" />
+        </a>
+
+        <script>
+        jQuery(document).ready(function($) {
+          $.ajax({
+          url : "https://api.wunderground.com/api/12b8a40c145b360a/geolookup/conditions/q/MI/Grand_Rapids.json",
+          dataType : "jsonp",
+          success : function(parsed_json) {
+            var obs_time = parsed_json['current_observation']['observation_time'];
+            var full_loc = parsed_json['current_observation']['display_location']['full'];
+            var weather = parsed_json['current_observation']['weather'];
+            var temperature = parsed_json['current_observation']['temperature_string'];
+            var dewpoint = parsed_json['current_observation']['dewpoint_string'];
+            var humidity = parsed_json['current_observation']['relative_humidity'];
+            var wind_string = parsed_json['current_observation']['wind_string'];
+            var pressure_in = parsed_json['current_observation']['pressure_in'];
+            var pressure_trend = parsed_json['current_observation']['pressure_trend'];
+            var icon = parsed_json['current_observation']['icon'];
+          document.getElementById("obs_time").innerHTML = (obs_time);
+          document.getElementById("full_loc").innerHTML = ("Observation for: " + full_loc);
+          document.getElementById("weather").innerHTML = ("Weather: " + weather);
+          document.getElementById("temperature").innerHTML = ("Temperature: " + temperature);
+          document.getElementById("dewpoint").innerHTML = ("Dewpoint: " + dewpoint);
+          document.getElementById("humidity").innerHTML = ("Humidity: " + humidity);
+          document.getElementById("wind").innerHTML = ("Wind: " + wind_string);
+          document.getElementById("pressure").innerHTML = ("Pressure: " + pressure_in + " " + pressure_trend);
+          document.getElementById("icon").innerHTML = ("<img src='public/images/weather-underground-icons/dist/icons/white/png/256x256/" + icon + ".png'>");
+
+          if (weather === "Overcast" || weather === "Cloudy" || weather === "Mostly Cloudy") {
+            document.getElementById("weather-body").style.background = "url('../images/Background-Cloudy.jpg')";
+          }
+          else if (weather === "Foggy") {
+            document.getElementById("weather-body").style.background = "url('../images/Background-Foggy.png')";
+          }
+          else if (weather === "Rain" || weather === "Showers") {
+            document.getElementById("weather-body").style.background = "url('../images/Background-Rain.jpg')";
+          }
+          else if (weather === "Snow" || weather === "Flurries") {
+            document.getElementById("weather-body").style.background = "url('../images/Background-Snow.jpg')";
+          }
+          else if (weather === "Sunny") {
+            document.getElementById("weather-body").style.background = "url('../images/Background-Sunny.jpg')";
+          }
+          else if (weather === "Partly Cloudy") {
+            document.getElementById("weather-body").style.background = "url('../images/Background-PartlyCloudy.jpg')";
+          }
+          else {
+            document.getElementById("weather-body").style.background = "url('../images/Background-NoPhoto.jpg')";
+          }
+
+          }
+          });
+        });
+        </script>
+        <p>Powered by Weather Underground</p>
+        <p id="obs_time" class="updated"></p>
+        <h1 id="full_loc" class="weather"></h1>
+        <h1 id="weather" class="weather"></h1>
+        <h1 id="temperature" class="weather"></h1>
+        <h1 id="dewpoint" class="weather"></h1>
+        <h1 id="humidity" class="weather"></h1>
+        <h1 id="wind" class="weather"></h1>
+        <h1 id="pressure" class="weather"></h1>
+        <h1 id="icon" class="weather"></h1>
       </div>
 
-<!-- SECTION FOUR -->
+<!-- SECTION FOUR: 360 Photo -->
 
-      <a id="levelfour"> </a>
-      <div class="text-block">
-        <h1>You've reached Level Four</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum."</p>
-        <a href="#top">Back to top of page</a>
+      <a id="boxfour"> </a>
+      <div class="text-block four-block">
+        <br>
+        <iframe src="https://www.360cities.net/embed_iframe/petite-suisse-france"
+          width="908" height="673" frameborder="0" bgcolor="#000000" target="_blank"
+          allowfullscreen webkitallowfullscreen mozallowfullscreen>
+        </iframe>
       </div>
-      <div class="text-block">
+
+<!-- SECTION FIVE -->
+
+      <a id="boxfive"> </a>
+      <div class="text-block five-block">
         <p></p>
-        <img src="/public/images/BlueRV6.jpg">
+        <img src="/public/images/N103SP.jpg">
       </div>
+
+<!-- SCRIPTS -->
 
       <!-- This imports the moment.js minified library -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
@@ -155,8 +207,11 @@
       <!-- This imports the javascript we're writing in scripts.js -->
       <script src="public/javascript/clock.js"></script>
 
+<!-- FOOTER -->
+
       <footer>
-        <p>Created by: Christopher Helgeson <a href="#top">Back to top of page</a></p>
+          <p class="alignleft"><a href="#top">Return to top of page</a></p>
+          <p class="alignright">Created by: Christopher Helgeson</p>
       </footer>
   </body>
 </html>

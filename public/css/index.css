@@ -9,29 +9,30 @@
   border-bottom: 3px solid #d5d5d5;
   font-size: .8em;
   margin-bottom: 200px;
+  z-index: 1;
 }
 
 /* Links inside the navbar */
 .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 /* Main content */
 .main {
-    margin-top: 80px; /* Add a top margin to avoid content overlay */
+  margin-top: 80px; /* Add a top margin to avoid content overlay */
 }
 
 body {
-    background-image: url("/public/images/Background-Foggy.jpg");
-    background-color: black;
-    margin: 200px auto;
-    width: 70%;
-    padding-top: 100px;
+  background-image: url("/public/images/Background-Foggy.jpg");
+  background-color: black;
+  margin: 200px auto;
+  width: 70%;
+  padding-top: 100px;
 }
 
 body html {
@@ -39,53 +40,75 @@ body html {
 }
 
 .parallax {
-    /* The image used */
-    /*background-image: url("/public/images/background-foggy.jpg");
+  /* The image used */
+  /*background-image: url("/public/images/background-foggy.jpg");
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-    font-size: 1.4em;
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  padding: 0px;
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.4em;
 }
 nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 #page-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
   font-size: 4em;
   color: #d67424;
-  margin-bottom: 150px;
+  /*margin-bottom: 150px;*/
 }
 
 div.text-block {
-    background-color: black;
-    box-sizing: border-box;
-    height: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    border: 3px solid #d67424;
-    margin-top: 360px;
-    /*margin-bottom: 0px;*/
+  background-color: black;
+  box-sizing: border-box;
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  border: 3px solid #d67424;
+}
+
+div.title-block {
+  margin-top: 130px;
+}
+
+div.one-block {
+  margin-top: 380px;
 }
 
 div.clock-block {
-    height: 430px;
+  height: 430px;
+  margin-top: 380px;
+}
+
+div.weather-block {
+  margin-top: 380px;
+}
+
+div.four-block {
+  margin-top: 380px;
+}
+
+div.five-block {
+  margin-top: 380px;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 /*a.levelone {
@@ -93,14 +116,14 @@ a {
 }*/
 
 /*a.section-title {
-    top: -150px;
-    display: block;
-    top: -260px;
-    visibility: hidden;
+  top: -150px;
+  display: block;
+  top: -260px;
+  visibility: hidden;
 }*/
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /*h1 {
@@ -114,9 +137,9 @@ h1 {
 }
 
 p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: white;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  color: white;
 }
 
 footer {
@@ -132,10 +155,20 @@ footer {
 }
 
 ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
+  margin: 20px auto 40px;
+  font-size: 1.5em;
 }
 
 ul.posts li {
-    list-style: none;
+  list-style: none;
+}
+
+.alignleft {
+	float: left;
+  padding: 14px 16px;
+}
+
+.alignright {
+	float: right;
+  padding: 14px 16px;
 }

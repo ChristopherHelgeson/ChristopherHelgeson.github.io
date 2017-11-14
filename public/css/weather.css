@@ -16,18 +16,15 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
-/*a {
-    text-decoration: none;
-    color: purple;
-}*/
 
 a:hover {
     text-decoration: underline;
 }
 
 h1.weather {
+  margin-left: 30px;
   padding-top: 0px;
-  color: #d67424;
+  color: white;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -41,10 +38,6 @@ p {
     color: white;
 }
 
-/*#weather-footer {
-  color:#018BEE;
-}*/
-
 ul.posts {
     margin: 20px auto 40px;
     font-size: 1.5em;
@@ -56,8 +49,8 @@ ul.posts li {
 
 #WUlogo {
     width: 600px;
-    border: 25px solid white;
-    /*border-right: 200px;*/
+    /*border: 25px solid white;*/
+    margin: 30px;
 }
 
 .updated {
