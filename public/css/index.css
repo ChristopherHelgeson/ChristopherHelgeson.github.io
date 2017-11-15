@@ -22,11 +22,6 @@
   text-decoration: none;
 }
 
-/* Main content */
-.main {
-  margin-top: 80px; /* Add a top margin to avoid content overlay */
-}
-
 body {
   background-image: url("/public/images/Background-Foggy.jpg");
   background-color: black;
@@ -62,15 +57,6 @@ nav ul li, footer ul li {
   margin-right: 20px;
 }
 
-#page-title {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 4em;
-  color: #d67424;
-  /*margin-bottom: 150px;*/
-}
-
 div.text-block {
   background-color: black;
   box-sizing: border-box;
@@ -82,7 +68,10 @@ div.text-block {
 }
 
 div.title-block {
-  margin-top: 130px;
+  margin-top: 330px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #d67424; /* Not doing anything. Why? */
 }
 
 div.one-block {
@@ -131,7 +120,7 @@ a:hover {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }*/
 h1 {
-  padding-top: 0px;
+  padding-top: 15px;
   color: white;
   font-family: 'Oswald', sans-serif;
 }
