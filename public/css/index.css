@@ -1,3 +1,7 @@
+:root {
+  --weather-background: url("/public/images/Background-Foggy.jpg");
+}
+
 .navbar {
   position:fixed;
   left:0px;
@@ -23,7 +27,7 @@
 }
 
 body {
-  background-image: url("/public/images/Background-Foggy.jpg");
+  background-image: var(--weather-background);
   background-color: black;
   margin: 200px auto;
   width: 70%;
@@ -36,7 +40,7 @@ body html {
 
 .parallax {
   /* The image used */
-  /*background-image: url("/public/images/background-foggy.jpg");
+  /*background-image: url("/public/images/background-foggy.jpg");*/
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

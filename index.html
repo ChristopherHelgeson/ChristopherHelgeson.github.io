@@ -29,7 +29,7 @@
             // transition from scrollTop (HTML property) to
             //toPosition (var defined above = top of element)
             // over 2000 milliseconds
-            // and when complete execute callback to 'easeOutExpo' function
+            // and when complete, execute callback to 'easeOutExpo' function
             $("body,html").animate({
               scrollTop : toPosition
             },2000)
@@ -48,7 +48,7 @@
 
   </head>
   <!-- <body id="weather-body" class="parallax"> -->
-  <body class="parallax">
+  <body id="weather-body" class="parallax">
     <nav class="navbar">
       <ul>
         <li>
@@ -188,25 +188,25 @@
           //check if id weather-body exists -- removed from body tag so parallax will work
           if(document.getElementById("weather-body")) {
           if (weather === "Overcast" || weather === "Cloudy" || weather === "Mostly Cloudy") {
-            document.getElementById("weather-body").style.background = "url('public/images/Background-Cloudy.jpg')";
+            document.getElementById("weather-body").style.backgroundImage = "url('public/images/Background-Cloudy.jpg')";
           }
           else if (weather === "Foggy") {
-            document.getElementById("weather-body").style.background = "url('public/images/Background-Foggy.png')";
+            document.getElementById("weather-body").style.backgroundImage = "url('public/images/Background-Foggy.png')";
           }
           else if (weather === "Rain" || weather === "Showers") {
-            document.getElementById("weather-body").style.background = "url('public/images/Background-Rain.jpg')";
+            document.getElementById("weather-body").style.backgroundImage = "url('public/images/Background-Rain.jpg')";
           }
           else if (weather === "Snow" || weather === "Flurries") {
-            document.getElementById("weather-body").style.background = "url('public/images/Background-Snow.jpg')";
+            document.getElementById("weather-body").style.backgroundImage = "url('public/images/Background-Snow.jpg')";
           }
           else if (weather === "Sunny") {
-            document.getElementById("weather-body").style.background = "url('public/images/Background-Sunny.jpg')";
+            document.getElementById("weather-body").style.backgroundImage = "url('public/images/Background-Sunny.jpg')";
           }
           else if (weather === "Partly Cloudy") {
-            document.getElementById("weather-body").style.background = "url('public/images/Background-PartlyCloudy.jpg')";
+            document.getElementById("weather-body").style.backgroundImage = "url('public/images/Background-PartlyCloudy.jpg')";
           }
           else {
-            document.getElementById("weather-body").style.background = "url('public/images/Background-NoPhoto.jpg')";
+            document.getElementById("weather-body").style.backgroundImage = "url('public/images/Background-NoPhoto.jpg')";
           }
         }
           }
