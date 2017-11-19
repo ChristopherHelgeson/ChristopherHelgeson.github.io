@@ -6,22 +6,13 @@
     <link rel="stylesheet" type="text/css" href="public/css/index.css">
     <link rel="stylesheet" type="text/css" href="public/css/clock.css">
     <link rel="stylesheet" type="text/css" href="public/css/weather.css">
+    <!-- following line for jquery - needed for parallax and others -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script>
-      var device = navigator.userAgent;
-      var deviceType = "";
-      var isAppleMobile = device.includes("iPad" || "iPhone" || "iPod");
-      if (isAppleMobile) {
-        deviceType = "Apple mobile device";
-        alert(deviceType);
-      };
-      if (deviceType <> "") {document.getElementById("device-type").innerHTML = ("You are using an Apple mobile device.")};
-    </script>
 
     <script>
       // wait until page is loaded before performing function
       $(document).ready(function() {
+
         // when an 'a' tag is clicked . . .
         $("a").click(function() {
           // this.hash reads href attribute of current tag including the '#'
@@ -46,14 +37,6 @@
             },2000)
           }
         });
-
-        // //do the same with urls with hash too (so on page load it will slide nicely)
-        // if(location.hash) {
-        //   var hash = location.hash;
-        //   window.scroll(0,0);
-        //   jQuery("a[href="+hash+").click();
-        // });
-
       });
     </script>
 
@@ -91,6 +74,33 @@
     </div>
 
 <!-- SECTION ONE -->
+
+      <script>
+        jQuery(document).ready(function() {
+          var userAgentString = navigator.userAgent;
+
+          document.getElementById("device-type").innerHTML = (userAgentString);
+        });
+      </script>
+
+      <!-- <script>
+        alert("hello");
+        // wait until page is loaded before performing function
+        jQuery(document).ready(function() {
+          var device = navigator.userAgent;
+          alert(device);
+          var deviceType = "";
+          var isAppleMobile = device.includes("iPad" || "iPhone" || "iPod");
+          if (isAppleMobile) {
+            deviceType = "Apple mobile device";
+            alert(deviceType);
+          };
+          if (deviceType <> "") {
+            document.getElementById("device-type").innerHTML = ("You are using an Apple mobile device.")
+          };
+        });
+      </script> -->
+
 
       <a id="boxone"> </a>
       <div class="text-block one-block">
@@ -178,7 +188,7 @@
           else {
             document.getElementById("weather-body").style.backgroundImage = "url('public/images/Background-NoPhoto.jpg')";
           }
-        }
+          }
           }
           });
         });
@@ -216,7 +226,7 @@
 
 <!-- SCRIPTS -->
 
-      <!-- This imports the moment.js minified library -->
+      <!-- This imports the moment.js minified library for the analog clock-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
 
       <!-- This imports the javascript we're writing in scripts.js -->
