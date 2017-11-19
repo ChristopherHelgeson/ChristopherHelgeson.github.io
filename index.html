@@ -12,7 +12,10 @@
       var device = navigator.userAgent;
       var deviceType = "";
       var isAppleMobile = device.includes("iPad" || "iPhone" || "iPod");
-      if (isAppleMobile) {deviceType = "Apple mobile device"};
+      if (isAppleMobile) {
+        deviceType = "Apple mobile device";
+        alert(deviceType);
+      };
       if (deviceType <> "") {document.getElementById("device-type").innerHTML = ("You are using an Apple mobile device.")};
     </script>
 
