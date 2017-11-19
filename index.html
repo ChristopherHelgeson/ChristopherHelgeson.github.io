@@ -9,6 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
+      var device = navigator.userAgent;
+      var deviceType = "";
+      var isAppleMobile = device.includes("iPad" || "iPhone" || "iPod");
+      if (isAppleMobile) {deviceType = "Apple mobile device"};
+      if (deviceType <> "") {document.getElementById("device-type").innerHTML = ("You are using an Apple mobile device.")};
+    </script>
+
+    <script>
       // wait until page is loaded before performing function
       $(document).ready(function() {
         // when an 'a' tag is clicked . . .
@@ -55,7 +63,7 @@
           <a href="#page-title">Title</a>
         </li>
         <li>
-          <a href="#boxone">Level One</a>
+          <a href="#boxone">Device Info</a>
         </li>
         <li>
           <a href="#boxtwo">Clock</a>
@@ -66,21 +74,9 @@
         <li>
           <a href="#boxfour">360 Photo</a>
         </li>
-        <!-- <li>
-          <a href="/public/html/weather.html">Weather</a>
-        </li> -->
-        <!-- <li>
-          <a href="/public/html/clock.html">Clock</a>
-        </li> -->
         <li>
           <a href="#boxfive">N103SP</a>
         </li>
-        <!-- <li>
-          <a href="/public/html/360photo.html">360 Photo</a>
-        </li> -->
-        <!-- <li>
-          <a href="/public/html/xterm.html">xterm.js</a>
-        </li> -->
       </ul>
     </nav>
 
@@ -88,44 +84,15 @@
 
     <a id="page-title"> </a>
     <div class="text-block title-block">
-      <h1>Christopher's Dashboard-in-Process</h1>
+      <h1>Experiments in Web Design</h1>
     </div>
 
 <!-- SECTION ONE -->
 
       <a id="boxone"> </a>
       <div class="text-block one-block">
-        <h1>You've reached Level One</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-        Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-        Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-        Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-        Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum."</p>
+        <h1>Gathering User Info</h1>
+        <p id="device-type">No iPad, iPhone, or iPad detected.</p>
       </div>
 
 <!-- CLOCK SECTION -->
