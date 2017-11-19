@@ -78,34 +78,56 @@
       <script>
         jQuery(document).ready(function() {
           var userAgentString = navigator.userAgent;
+          document.getElementById("user-agent-string").innerHTML = ("COMPLETE userAgent STRING: " + userAgentString);
 
-          document.getElementById("device-type").innerHTML = (userAgentString);
+          // determine browser
+          if ((userAgentString.search("Firefox") > -1) && (userAgentString.search("Seamonkey") == -1)) {
+            var browser = "Firefox";
+          } else if ((userAgentString.search("Edge") == -1) && (userAgentString.search("Chrome") > -1)) {
+            var browser = "Chrome";
+          // } else if (userAgentString.search("Opera"|"OPR") > -1) {
+          //   var browser = "Opera";
+          } else if (userAgentString.search("Edge") > -1) {
+            var browser = "Edge";
+          } else if ((userAgentString.search("Chrome"|"Chromium") == -1) && (userAgentString.search("Safari") > -1)) {
+            var browser = "Safari";
+          } else {
+            var browser = "not able to detect.";
+          };
+          document.getElementById("browser-type").innerHTML = ("BROWSER: " + browser);
+
+          // determine whether mobile device
+          if (userAgentString.search("iPad") > -1) {
+            var mobileType = "iPad";
+          } else if (userAgentString.search("iPhone") > -1) {
+            var mobileType = "iPhone";
+          } else if (userAgentString.search("iPod") > -1) {
+            var mobileType = "iPod";
+          } else {
+            var mobileType = "not an Apple mobile device";
+          };
+          document.getElementById("device-type").innerHTML = ("DEVICE TYPE: " + mobileType);
+
+          // determine operating system
+          if (userAgentString.search("Windows") > -1) {
+            var opSys = "Windows";
+          } else if (userAgentString.search("OS") > -1) {
+            var opSys = "iOS";
+          } else {
+            var opSys = "Unix";
+          };
+          document.getElementById("operating-system").innerHTML = ("OPERATING SYSTEM: " + opSys);
+
         });
       </script>
-
-      <!-- <script>
-        alert("hello");
-        // wait until page is loaded before performing function
-        jQuery(document).ready(function() {
-          var device = navigator.userAgent;
-          alert(device);
-          var deviceType = "";
-          var isAppleMobile = device.includes("iPad" || "iPhone" || "iPod");
-          if (isAppleMobile) {
-            deviceType = "Apple mobile device";
-            alert(deviceType);
-          };
-          if (deviceType <> "") {
-            document.getElementById("device-type").innerHTML = ("You are using an Apple mobile device.")
-          };
-        });
-      </script> -->
-
 
       <a id="boxone"> </a>
       <div class="text-block one-block">
         <h1>Gathering User Info</h1>
+        <p id="user-agent-string"></p>
+        <p id="browser-type"></p>
         <p id="device-type">No iPad, iPhone, or iPad detected.</p>
+        <p id="operating-system"></p>
       </div>
 
 <!-- CLOCK SECTION -->
