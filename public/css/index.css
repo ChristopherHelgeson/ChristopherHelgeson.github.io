@@ -1,5 +1,5 @@
 :root {
-  --weather-background: url("/public/images/Background-Foggy.jpg");
+  --weather-background: black;
 }
 
 .navbar {
