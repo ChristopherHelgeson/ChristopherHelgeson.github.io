@@ -13,7 +13,7 @@ $(document).ready(function() {
       var $toElement = $("[id="+hash+"]");
       console.log($toElement);
       // set 'toPosition' to top x value of the element container
-      var toPosition = $toElement.position().top;
+      var toPosition = ($toElement.position().top - 180);
       console.log(toPosition);
       // for elements within either 'body' or 'html' tags, animate
       // transition from scrollTop (HTML property) to

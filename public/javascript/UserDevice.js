@@ -54,7 +54,7 @@ function gatherSizeInfo() {
   document.getElementById("screen-size").innerHTML = ("SCREEN SIZE: " + screen.width + "w X " + screen.height + "h");
   document.getElementById("window-size").innerHTML = ("WINDOW SIZE: " + windowWidth + "w X " + windowHeight + "h");
   document.getElementById("document-size").innerHTML = ("DOCUMENT SIZE: " + documentWidth + "w X " + documentHeight + "h");
-  document.getElementById("body-size").innerHTML = ("BOX SIZE: " + containerWidth + "w X " + containerHeight + "h");
+  document.getElementById("element-size").innerHTML = ("CONTAINER SIZE: " + containerWidth + "w X " + containerHeight + "h");
 }
 
 // run function at least once to populate page

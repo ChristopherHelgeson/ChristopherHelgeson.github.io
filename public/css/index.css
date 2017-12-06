@@ -73,36 +73,48 @@ div.text-block {
   border: 3px solid #d67424;
 }
 
+div.invisible-spacer {
+  height: 1050px;
+}
+
 div.title-block {
   margin-top: 330px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   text-align: center;
   color: #d67424; /* Not doing anything. Why? */
 }
 
 div.one-block {
-  margin-top: 380px;
+  /*margin-top: 380px;*/
 }
 
-div.clock-block {
-  margin-top: 380px;
+div.two-block {
+  /*margin-top: 380px;*/
   padding-bottom: 50px;
 }
 
-div.weather-block {
-  margin-top: 380px;
+div.three-block {
+  /*margin-top: 380px;*/
 }
 
 div.four-block {
-  margin-top: 380px;
+  /*margin-top: 380px;*/
 }
 
+/*.my-iframe {
+  width: 908px;
+  height: 673px;
+  frameborder: 0;
+  bgcolor: #000000;
+  target: _blank;
+}*/
+
 div.five-block {
-  margin-top: 380px;
+  /*margin-top: 380px;*/
 }
 
 div.six-block {
-  margin-top: 380px;
+  /*margin-top: 380px;*/
   margin-bottom: 300px;
 }
 
