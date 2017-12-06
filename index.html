@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/index.css">
     <link rel="stylesheet" type="text/css" href="public/css/clock.css">
     <link rel="stylesheet" type="text/css" href="public/css/weather.css">
+    <link rel="stylesheet" type="text/css" href="public/css/aviation.css">
     <!-- following line for jquery - needed for parallax and others -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
@@ -52,7 +53,7 @@
 
       <a id="boxone"> </a>
       <div id="size" class="text-block one-block">
-        <h1>Working with User Device Info</h1>
+        <h2>Working with User Device Info</h2>
         <br>
         <p id="user-agent-string"></p>
         <p id="browser-type"></p>
@@ -72,7 +73,7 @@
 
       <a id="boxtwo"> </a>
       <div class="text-block two-block">
-        <h1>Working with JavaScript Libraries (moment.js)</h1>
+        <h2>Working with JavaScript Libraries (moment.js)</h2>
         <br>
   <!-- Date and time from Alison Major demo -->
         <h1 id="current-date" class="text-center h3 date-text">
@@ -100,7 +101,7 @@
 
       <a id="boxthree"> </a>
       <div class="text-block three-block">
-        <h1>Working with APIs</h1>
+        <h2>Working with APIs</h2>
         <br>
         <a href="https://www.weatherunderground.com" target="_blank">
           <img id="WUlogo" src="public/images/wundergroundLogo_4c_rev_horz.png" />
@@ -125,7 +126,7 @@
 
       <a id="boxfour"> </a>
       <div class="text-block four-block">
-        <h1>Working with Inline Frames (html iframe tag)</h1>
+        <h2>Working with Inline Frames (html iframe tag)</h2>
         <br>
         <iframe src="https://www.google.com/maps/embed?pb=!1m0!4v1512572653800!6m8!1m7!1sgyY0yUIrx2R77P0rSxxdVQ!2m2!1d42.96319903526336!2d-85.66918559059923!3f226.2956756556957!4f6.989021401055695!5f0.7820865974627469"
           width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -140,7 +141,7 @@
 
       <a id="boxfive"> </a>
       <div class="text-block five-block">
-        <h1>Working with Static Images</h1>
+        <h2>Working with Static Images</h2>
         <p></p>
         <img src="/public/images/N103SPairplane.jpg">
       </div>
@@ -153,9 +154,13 @@
 
       <a id="boxsix"> </a>
       <div class="text-block six-block">
-        <h1>Working with Scraping</h1>
-        <h1 id="timestamp" class="aviation"></h1>
-        <h1 id="airport-code" class="aviation"></h1>
+        <h2>Working with Scraping</h2>
+        <h1>Aviation Weather</h1>
+        <br>
+        <p id="weather-string" class="aviation"></p>
+        <p>Translated information:</p>
+        <ul id="weather-list"></ul>
+        <p id="timestamp" class="aviation"></p>
       </div>
 
 <!-- INVISIBLE SPACER -->
@@ -179,8 +184,8 @@
       <!-- This imports the javascript from WeatherUnderground.js -->
       <script src="public/javascript/WeatherUnderground.js"></script>
 
-      <!-- This imports the javascript from AviationWeather.js -->
-      <script src="public/javascript/AviationWeather.js"></script>
+      <!-- This imports the javascript from Aviation.js -->
+      <script src="public/javascript/Aviation.js"></script>
 
       <!-- This imports the javascript from AviationWeather.js -->
       <!-- <script src="public/javascript/Scrape.js"></script> -->

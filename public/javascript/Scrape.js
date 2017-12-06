@@ -1,25 +1,31 @@
-document.getElementById("timestamp").innerHTML = "top of scrape.js file";
+document.getElementById("top-aviation").innerHTML = "TOP: check";
 
-const request = require('request');
-const rp = require('request-promise');
-const cheerio = require('cheerio');
-document.getElementById("timestamp").innerHTML = "later";
+// const request = request();
+// const rp = request-promise();
+// const cheerio = cheerio();
 
-const options = {
-  uri: `http://aviationweather.gov/metar/data?ids=KGRR&format=raw&date=0&hours=0`,
-  transform: function (html) {
-    return cheerio.load(html);
-  }
-};
+document.getElementById("const-aviation").innerHTML = "AFTER CONSTs DECLARED: check";
 
-document.getElementById("timestamp").innerHTML = "before rp";
+var xhttp = new XMLHttpRequest,
+    method = "GET",
+    url = "http://aviationweather.gov/metar/data?ids=KGRR&format=raw&date=0&hours=0";
+var airportCodeIndex = (url.indexOf("ids=") + 4);
+var airportCode = url.substr(airportCodeIndex, 4);
 
-rp(options)
-  .then(function (data) {
-    console.log("success")
-  })
-  .catch(function (err) {
-    console.log("failure");
-  });
+function loadDoc() {
+  //var xhttp = new XMLHttpRequest();
 
-document.getElementById("timestamp").innerHTML = "after rp";
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("weather-string").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open(method, url, true);
+  xhttp.send();
+}
+
+loadDoc();
+
+document.getElementById("website-call-aviation").innerHTML = "AFTER CALL TO WEBSITE: check";
+
+document.getElementById("bottom-aviation").innerHTML = "BOTTOM: check";
