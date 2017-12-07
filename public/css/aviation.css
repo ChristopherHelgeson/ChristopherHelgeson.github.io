@@ -1,0 +1,9 @@
+#timestamp {
+  text-align: right;
+  color: gray;
+}
+
+#weather-list {
+  color: white;
+  font-size: 1.3em;
+}
